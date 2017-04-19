@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../node_modules/reveal.js/css/theme/white.css">
+        <link rel="stylesheet" href="../node_modules/highlight.js/styles/github-gist.css">
+        <link rel="stylesheet" href="css/slide.css">
+    </head>
+    <body>
+        <article class="reveal">
+            <main class="slides"></main>
+        </article>
+        <script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+        <script src="../node_modules/reveal.js/js/reveal.js"></script>
+        <!-- Theme used for syntax highlighting of code -->
+        <script>
+            (function (mainDiv) {
+                // noinspection ES6ConvertVarToLetConst
+                for (var i = 1; i <= 15; i++) {
+                    mainDiv.insertAdjacentHTML('beforeEnd'.toLowerCase(),
+                        ''
+                        + '<section data-markdown="slides-' + i + '.md?' + new Date().getTime() + '" data-charset="utf-8"'
+                        + '         data-separator         ="<hr section-separator>"'
+                        + '         data-separator-vertical="^\r?\n---\r?\n$"'
+                        + '></section>');
+                }
+
+                // noinspection JSUnusedGlobalSymbols
+                Reveal.initialize({
+
+                    slideNumber : true,
+                    history     : true,
+
+                    // More info https://github.com/hakimel/reveal.js#dependencies
+                    dependencies : [
+                        {src : '../node_modules/reveal.js/plugin/markdown/marked.js'},
+                        {src : '../node_modules/reveal.js/plugin/markdown/markdown.js'},
+                        {src : '../node_modules/reveal.js/lib/js/classList.js'},
+                        {src : '../node_modules/reveal.js/plugin/zoom-js/zoom.js', async : true},
+                        {src : '../node_modules/reveal.js/plugin/notes/notes.js', async : true},
+                        {
+                            src      : '../node_modules/reveal.js/plugin/highlight/highlight.js',
+                            async    : true,
+                            callback : function () { hljs.initHighlightingOnLoad(); }
+                        },
+                    ]
+                });
+            })(document.getElementsByClassName('slides')[0]);
+        </script>
+    </body>
+</html>

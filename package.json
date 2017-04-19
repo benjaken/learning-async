@@ -1,0 +1,27 @@
+{
+    "name"            : "lerning-async",
+    "version"         : "0.0.1",
+    "description"     : "Learing Async Programing",
+    "repository"      : "lwr/lerning-async",
+    "private"         : true,
+
+    "scripts"         : {
+        "slide" : "./slide.sh; exit 0"
+    },
+
+    "dependencies"    : {
+        "deasync" : "^0.1.9",
+        "fibers"  : "^1.0.15"
+    },
+
+    "devDependencies" : {
+        "reveal.js"    : "^3.4.1",
+        "highlight.js" : "^9.10.0"
+    },
+
+    "engines"         : {
+        "node" : ">=7.0.0"
+    },
+
+    "license"         : "MIT"
+}
